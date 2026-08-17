@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDD Develop Feature"
+  short_description: "Develop features through two gated IDD layers"
+  default_prompt: "Use $idd-develop-feature to clarify and plan this feature through the IDD intent and contract gates."

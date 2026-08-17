@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDD Debug"
+  short_description: "Analyze or fix bugs from verified root causes"
+  default_prompt: "Use $idd-debug to analyze this bug and fix it only after the root cause is verified."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDD Remove Feature"
+  short_description: "Disable, deprecate, or delete features coherently"
+  default_prompt: "Use $idd-remove-feature to map and safely remove this feature across docs, code, and operations."

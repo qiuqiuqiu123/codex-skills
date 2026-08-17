@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDD Reconcile"
+  short_description: "Audit and repair IDD drift and anchor integrity"
+  default_prompt: "Use $idd-reconcile to audit this project for drift across intent, contracts, code, tests, and anchors."

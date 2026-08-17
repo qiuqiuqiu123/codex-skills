@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDD Init Project"
+  short_description: "Initialize greenfield or brownfield IDD projects"
+  default_prompt: "Use $idd-init-project to initialize IDD in this project without overwriting existing rules."

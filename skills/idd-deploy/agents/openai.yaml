@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDD Deploy"
+  short_description: "Deploy revisions with live verification and rollback"
+  default_prompt: "Use $idd-deploy to deploy this revision to the specified environment and verify it live."
