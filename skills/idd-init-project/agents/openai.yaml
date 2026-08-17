@@ -1,4 +1,4 @@
 interface:
-  display_name: "IDD Init Project"
-  short_description: "Initialize greenfield or brownfield IDD projects"
-  default_prompt: "Use $idd-init-project to initialize IDD in this project without overwriting existing rules."
+  display_name: "IDD 项目初始化"
+  short_description: "以 Greenfield 或 Brownfield 模式初始化完整 IDD 项目"
+  default_prompt: "使用 $idd-init-project 在这个项目中初始化 IDD，并保留已有规则。"

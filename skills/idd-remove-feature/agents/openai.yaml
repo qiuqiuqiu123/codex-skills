@@ -1,4 +1,4 @@
 interface:
-  display_name: "IDD Remove Feature"
-  short_description: "Disable, deprecate, or delete features coherently"
-  default_prompt: "Use $idd-remove-feature to map and safely remove this feature across docs, code, and operations."
+  display_name: "IDD 特性删除"
+  short_description: "跨文档、代码和运行资产停用、弃用或删除 IDD 特性"
+  default_prompt: "使用 $idd-remove-feature 建立影响图，并跨文档、代码和运维资产安全删除这个特性。"

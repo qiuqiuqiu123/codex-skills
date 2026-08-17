@@ -1,4 +1,4 @@
 interface:
-  display_name: "IDD Reconcile"
-  short_description: "Audit and repair IDD drift and anchor integrity"
-  default_prompt: "Use $idd-reconcile to audit this project for drift across intent, contracts, code, tests, and anchors."
+  display_name: "IDD 一致性校验"
+  short_description: "审计并修复 IDD 意图、契约、代码、测试和锚点漂移"
+  default_prompt: "使用 $idd-reconcile 审计这个项目中 intent、contracts、代码、测试和锚点之间的漂移。"

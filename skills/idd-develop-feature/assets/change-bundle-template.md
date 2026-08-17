@@ -1,70 +1,70 @@
-# IDD Feature Change Bundle
+# IDD 特性变更包
 
-Create these files under `.idd/changes/<slug>/`. They are transaction records, not canonical business sources.
+在 `.idd/changes/<slug>/` 下创建以下文件。它们是事务记录，不是权威业务源。
 
 ## `request.md`
 
 ```markdown
-# Feature Request: <title>
+# 特性需求：<标题>
 
-- Slug: <slug>
-- Mode: plan | build
-- Profile: lightweight | enterprise
-- Status: clarifying | awaiting-intent-approval | awaiting-contract-approval | ready-to-build | implementing | verified
+- Slug：<slug>
+- 模式：plan | build
+- 方案等级：lightweight | enterprise
+- 状态：clarifying | awaiting-intent-approval | awaiting-contract-approval | ready-to-build | implementing | verified
 
-## Outcome
-## Users and Roles
-## Current Behavior
-## Desired Behavior
-## Acceptance Scenarios
-## Non-goals
-## Constraints
-## Open Questions
-## Approval Log
+## 目标结果
+## 用户与角色
+## 当前行为
+## 期望行为
+## 验收场景
+## 非目标
+## 约束
+## 开放问题
+## 批准记录
 ```
 
 ## `intent-proposal.md`
 
 ```markdown
-# Intent Proposal: <title>
+# 意图提案：<标题>
 
-## Canonical Files Affected
-## Business Rule and Workflow Diffs
-## Permission or Persona Impact
-## Assumptions
-## Gate 1 Decision
+## 受影响的权威文件
+## 业务规则和工作流 Diff
+## 权限或 Persona 影响
+## 假设
+## Gate 1 决策
 ```
 
 ## `contract-impact.md`
 
 ```markdown
-# Contract Impact: <title>
+# 契约影响：<标题>
 
-## Structure Contracts
-## Behavior Contracts
-## Compatibility and Migration
-## Consumers and Failure Modes
-## Gate 2 Decision
+## 结构契约
+## 行为契约
+## 兼容性与迁移
+## 消费者与失败模式
+## Gate 2 决策
 ```
 
 ## `design.md`
 
 ```markdown
-# Technical Design: <title>
+# 技术设计：<标题>
 
-## Context
-## Chosen Design
-## Verified Visual
-## Data and State Flow
-## Security and Operations
-## Alternatives and Trade-offs
-## Risks
+## 背景
+## 选定设计
+## 已验证设计图
+## 数据与状态流
+## 安全与运维
+## 替代方案与权衡
+## 风险
 ```
 
 ## `tasks.md`
 
-Use ordered checkboxes with a concrete file or artifact for every task. Include implementation, tests, anchors, migration, observability, deployment, and reconciliation when applicable.
+使用有序 checkbox，并为每项任务指定具体文件或产物。适用时包含实现、测试、锚点、迁移、可观测性、部署和一致性校验。
 
 ## `verification.md`
 
-Record acceptance evidence, commands and exit results, reconciliation findings, skipped checks with reasons, residual risks, and the exact revision when one exists.
+记录验收证据、命令和退出结果、一致性校验发现、跳过的检查及原因、残余风险，以及存在时的精确 revision。

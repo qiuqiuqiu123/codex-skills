@@ -1,4 +1,4 @@
 interface:
-  display_name: "IDD Deploy"
-  short_description: "Deploy revisions with live verification and rollback"
-  default_prompt: "Use $idd-deploy to deploy this revision to the specified environment and verify it live."
+  display_name: "IDD 部署"
+  short_description: "按环境和发布策略部署 revision 并完成线上验证与回滚"
+  default_prompt: "使用 $idd-deploy 将这个 revision 部署到指定环境，并在线上完成验证。"

@@ -1,4 +1,4 @@
 interface:
-  display_name: "IDD Develop Feature"
-  short_description: "Develop features through two gated IDD layers"
-  default_prompt: "Use $idd-develop-feature to clarify and plan this feature through the IDD intent and contract gates."
+  display_name: "IDD 特性开发"
+  short_description: "通过双重人工 Gate 规划并实现完整的 IDD 特性"
+  default_prompt: "使用 $idd-develop-feature，通过 IDD 意图和契约 Gate 澄清并规划这个特性。"

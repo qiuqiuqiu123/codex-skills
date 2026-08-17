@@ -1,4 +1,4 @@
 interface:
-  display_name: "IDD Debug"
-  short_description: "Analyze or fix bugs from verified root causes"
-  default_prompt: "Use $idd-debug to analyze this bug and fix it only after the root cause is verified."
+  display_name: "IDD Bug 调试"
+  short_description: "基于可验证根因分析或修复 IDD 项目中的各类故障"
+  default_prompt: "使用 $idd-debug 分析这个 Bug，并且只在根因得到验证后实施修复。"

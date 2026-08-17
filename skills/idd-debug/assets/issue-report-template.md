@@ -1,43 +1,43 @@
-# IDD Issue Bundle
+# IDD 问题包
 
 ## `analysis.md`
 
 ```markdown
-# Bug Analysis: <title>
+# Bug 分析：<标题>
 
-- Slug: <slug>
-- Mode: analyze | fix
-- Verdict: confirmed | likely | unconfirmed | not-a-bug
-- Severity: critical | high | medium | low
-- Root-cause confidence: high | medium | low
-- IDD layer: intent | contract | implementation | environment | unknown
+- Slug：<slug>
+- 模式：analyze | fix
+- 结论：confirmed | likely | unconfirmed | not-a-bug
+- 严重性：critical | high | medium | low
+- 根因置信度：high | medium | low
+- IDD 层：intent | contract | implementation | environment | unknown
 
-## Actual and Expected Behavior
-## Reproduction and Environment
-## Evidence
-## Affected Code and Anchors
-## Root Cause
-## Rejected Hypotheses
-## Preferred Remediation
-## Tests and Verification Plan
-## Risks and Open Questions
+## 实际与期望行为
+## 复现与环境
+## 证据
+## 受影响代码与锚点
+## 根因
+## 已排除假设
+## 首选修复方向
+## 测试与验证计划
+## 风险与开放问题
 ```
 
 ## `fix.md`
 
 ```markdown
-# Bug Fix: <title>
+# Bug 修复：<标题>
 
-- Analysis: ./analysis.md
-- Status: applied | partial | not-applied
+- 分析：./analysis.md
+- 状态：applied | partial | not-applied
 
-## Root-cause Fix
-## Files Changed
-## Regression Test
-## Deviations from Analysis
-## Anchor or Contract Impact
+## 根因修复
+## 变更文件
+## 回归测试
+## 与分析结论的偏差
+## 锚点或契约影响
 ```
 
 ## `verification.md`
 
-Record the original reproduction after the fix, new and existing test commands with results, broader regression evidence, skipped checks and reasons, residual risk, and verdict `verified | partial | failed`.
+记录修复后的原始复现、新增和已有测试命令及结果、更广范围的回归证据、跳过的检查及原因、残余风险和结论 `verified | partial | failed`。

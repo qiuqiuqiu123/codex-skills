@@ -1,12 +1,12 @@
-# IDD Core Protocol
+# IDD 核心协议
 
-> Version: 0.1.0-draft
+> 版本：0.1.0-draft
 >
-> Status: normative draft for tool and Skill adapters
+> 状态：面向工具和 Skill 适配器的规范草案
 
 本文定义 IDD 工具、Agent 和 Skill 必须共同遵守的最小协议。面向人的完整说明见 [idd-methodology.md](./idd-methodology.md)。
 
-## 1. Authority Model
+## 1. 权威模型
 
 权威顺序固定为：
 
@@ -22,7 +22,7 @@
 - `src/generated/` 由结构契约生成，不得手工修改。
 - 普通实现可以独立演化，但派生自意图或契约的代码必须保持锚点和一致性。
 
-## 2. Required Layers
+## 2. 必需层
 
 ```text
 project-root/
@@ -46,19 +46,19 @@ project-root/
 - `.validator/`：漂移检查配置和最近报告。
 - `.idd/`：变更、问题、发布和历史事务记录，不是业务权威源。
 
-## 3. Human Gates
+## 3. 人工 Gate
 
 标准前向工作流：
 
 ```text
-clarify request
-  -> draft intent
-  -> Gate 1: explicit human approval
-  -> draft contracts and technical design
-  -> Gate 2: explicit human approval
-  -> modify implementation and tests
-  -> refresh anchors
-  -> reconcile
+澄清需求
+  -> 起草意图
+  -> Gate 1：用户明确批准
+  -> 起草契约和技术设计
+  -> Gate 2：用户明确批准
+  -> 修改实现和测试
+  -> 刷新锚点
+  -> 一致性校验
 ```
 
 Gate 规则：
@@ -69,13 +69,13 @@ Gate 规则：
 - 上游内容改变后，所有受影响的下游草案必须重新计算。
 - 只修改现有实现、且不改变业务含义的 Bug 修复可以不创建新意图，但必须证明现有意图和契约已经明确覆盖预期行为。
 
-## 4. Solution Profiles
+## 4. 方案等级
 
-### Lightweight
+### 轻量级（Lightweight）
 
 适用于影响范围小、不涉及敏感数据和公共兼容契约的单模块变更。仍必须保留可测试意图、必要契约、验证和锚点。
 
-### Enterprise
+### 企业级（Enterprise）
 
 适用于跨服务、公开 API、金额、权限、隐私、合规、高可用、数据迁移或长期运维场景。在基础产物之外必须考虑：
 
@@ -88,7 +88,7 @@ Gate 规则：
 
 Agent 可以推荐 profile，但必须让用户明确确认。
 
-## 5. Change Propagation
+## 5. 变更传播
 
 | 变更源 | 必需动作 |
 |---|---|
@@ -101,7 +101,7 @@ Agent 可以推荐 profile，但必须让用户明确确认。
 
 传播只生成局部 diff，不重新生成整个系统。
 
-## 6. Anchors
+## 6. 锚点
 
 派生代码使用显式注释：
 
@@ -117,7 +117,7 @@ Agent 可以推荐 profile，但必须让用户明确确认。
 - 报告文档无实现、实现无文档和重复或冲突锚点。
 - 不要求纯实现细节拥有业务锚点。
 
-## 7. Transaction Records
+## 7. 事务记录
 
 推荐目录：
 
@@ -131,7 +131,7 @@ Agent 可以推荐 profile，但必须让用户明确确认。
 
 事务文件用于记录过程、审批、验证和审计。它们不得成为与 `intent/` 或 `contracts/` 并列的第二权威源。完成工作后，有效规则必须传播到对应权威层。
 
-## 8. Reconciliation
+## 8. 一致性校验
 
 完成实现、Bug 修复、特性删除或重要契约修改后，至少检查：
 
@@ -150,14 +150,16 @@ Agent 可以推荐 profile，但必须让用户明确确认。
 
 自动修复遇到业务语义歧义时必须停止，不能自行发明规则。
 
-## 9. Language Convention
+## 9. 语言约定
 
+- 面向人的说明文档、Skill 指令、UI 提示和事务产物模板默认使用中文；用户明确指定其他语言时除外。
 - `intent/`、`.steering/` 和契约说明使用中文。
 - schema、OpenAPI 和代码标识符使用其原生英文形式。
 - 行为契约保留 `WHEN`、`SHALL`、`IF`、`THEN`、`WHILE`、`Given`、`When`、`Then`、`And` 等英文关键字。
 - 锚点指令固定使用 `@intent:`、`@contract:` 和 `@override`。
+- 命令、路径、配置键、状态枚举、协议名及行业固定搭配保持原文，避免为中文化而破坏可执行性和通用语义。
 
-## 10. Adapter Invariants
+## 10. 适配器不变量
 
 任何 IDD Skill 或工具适配器都不得：
 

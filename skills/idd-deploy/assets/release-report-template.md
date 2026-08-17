@@ -1,43 +1,43 @@
-# IDD Release Bundle
+# IDD 发布包
 
 ## `plan.md`
 
 ```markdown
-# Release Plan: <release-id>
+# 发布计划：<release-id>
 
-- Environment: <environment>
-- Strategy: dry-run | standard | rolling | blue-green | canary | rollback
-- Source revision: <immutable revision>
-- Services: <list>
-- Rollback target: <revision or artifact>
-- Automatic rollback authorized: yes | no
+- 环境：<environment>
+- 策略：dry-run | standard | rolling | blue-green | canary | rollback
+- 源 revision：<不可变 revision>
+- 服务：<列表>
+- 回滚目标：<revision 或 artifact>
+- 已授权自动回滚：yes | no
 
-## Related IDD Changes
-## Preflight Commands
-## Migration Compatibility
-## Deployment Steps
-## Health and Smoke Signals
-## Promotion and Failure Thresholds
-## Rollback Procedure
-## Approval
+## 相关 IDD 变更
+## 预检命令
+## 迁移兼容性
+## 部署步骤
+## 健康与 Smoke 信号
+## Promotion 与失败阈值
+## 回滚流程
+## 批准
 ```
 
 ## `report.md`
 
 ```markdown
-# Release Report: <release-id>
+# 发布报告：<release-id>
 
-- Environment: <environment>
-- Source revision: <revision>
-- Live revision: <verified revision>
-- Result: verified | partial | failed | rolled-back
+- 环境：<environment>
+- 源 revision：<revision>
+- 线上 revision：<已验证 revision>
+- 结果：verified | partial | failed | rolled-back
 
-## Preflight Results
-## Deployment Events
-## Live Version Evidence
-## Readiness and Smoke Results
-## Metrics and Observation
-## Rollback Evidence
-## State Documents Updated
-## Residual Risks
+## 预检结果
+## 部署事件
+## 线上版本证据
+## Readiness 与 Smoke 结果
+## 指标与观察
+## 回滚证据
+## 已更新状态文档
+## 残余风险
 ```

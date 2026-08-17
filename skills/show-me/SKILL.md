@@ -1,15 +1,15 @@
 ---
 name: show-me
-description: Use when explaining code architecture, runtime flow, UI structure, data flow, refactors, state changes, or dense concepts would be clearer with a compact diagram, tree, diff, Mermaid diagram, or focused HTML artifact. Choose the smallest verifiable visual that improves understanding.
+description: 使用最小可验证视觉表达解释代码架构、运行流程、UI 结构、数据流、重构、状态变化或复杂概念。使用场景（Use when）：紧凑图示、树、diff、Mermaid 或聚焦的 HTML 产物能让当前主题比纯文字更清楚。
 ---
 
 # Show Me
 
-Explain the current topic with a concise conclusion and the smallest visual that makes its structure clear. Keep prose brief and place each visual next to the claim it supports.
+用简洁结论和能够说明结构的最小视觉表达解释当前主题。保持文字精炼，并将视觉内容紧邻其支撑的结论。除用户明确指定其他语言外，说明和图中自然语言标签默认使用中文。
 
-## Choose the representation
+## 选择表达形式
 
-- Use pseudocode for logic or an algorithm:
+- 逻辑或算法使用伪代码：
 
 ```text
 on(save)
@@ -19,7 +19,7 @@ on(save)
   return fresh result
 ```
 
-- Use a call tree for runtime control flow:
+- 运行时控制流使用调用树：
 
 ```text
 submitForm
@@ -29,7 +29,7 @@ submitForm
   navigateToSession
 ```
 
-- Use a component tree for UI structure. Include only meaningful state, hooks, props, and module boundaries:
+- UI 结构使用组件树，只包含有意义的状态、hooks、props 和模块边界：
 
 ```tsx
 <SessionPage> (apps/example/src/routes/session.tsx)
@@ -38,49 +38,49 @@ submitForm
     <RunSkillButton> (packages/ui)
 ```
 
-- Use a shallow file tree for file responsibility or broad refactors:
+- 文件职责或大范围重构使用浅层文件树：
 
 ```text
 src/
-|- commands/  # parses user actions
-|- sessions/  # owns session state
-`- transport/ # sends API requests
+|- commands/  # 解析用户操作
+|- sessions/  # 管理会话状态
+`- transport/ # 发送 API 请求
 ```
 
-- Use Mermaid for component interaction, control flow, or data flow:
+- 组件交互、控制流或数据流使用 Mermaid：
 
 ```mermaid
 sequenceDiagram
     participant User
     participant UI
     participant Daemon
-    User->>UI: choose command
-    UI->>Daemon: send expanded prompt
-    Daemon-->>UI: stream result
+    User->>UI: 选择命令
+    UI->>Daemon: 发送展开后的 prompt
+    Daemon-->>UI: 流式返回结果
 ```
 
-- Use `diff` when the point is a before/after change and the surrounding shape already exists.
-- Show a whole code block only when most of it is new, omitted context would hide ownership or order, or the user needs a copyable target shape.
-- For a layout, state comparison, or concept too dense for text and Mermaid, create one focused HTML artifact. Do not create HTML for a one-step fact or a small code change.
+- 重点是前后变化且上下文结构已存在时，使用 `diff`。
+- 仅当大部分内容都是新的、省略上下文会隐藏归属或顺序，或用户需要可直接使用的目标结构时，才展示完整代码块。
+- 布局、状态对比或文字与 Mermaid 难以清晰表达的复杂概念，使用一个聚焦的 HTML 产物。单步事实或小型代码变更不创建 HTML。
 
-## Accuracy and boundaries
+## 准确性与边界
 
-- Ground labels, files, functions, components, and arrows in the repository or the user's supplied material. Do not invent implementation details to complete a diagram.
-- Preserve ownership, ordering, direction, and state transitions that matter to the conclusion; omit incidental detail.
-- If the visual is an estimate or conceptual model, label it as such.
-- Prefer one visual. Use several only when each answers a different part of the question.
-- If the task is already clear in a short paragraph or snippet, skip visualization.
+- 图中的标签、文件、函数、组件和箭头必须来自仓库或用户提供的材料，不得为了补全图而虚构实现细节。
+- 保留影响结论的归属、顺序、方向和状态转换，省略无关细节。
+- 如果视觉内容属于估算或概念模型，明确标注。
+- 优先只使用一个视觉表达；只有每个图分别回答不同问题时才使用多个。
+- 如果短段落或代码片段已经足够清楚，则不使用可视化。
 
-## HTML artifacts in Codex
+## Codex 中的 HTML 产物
 
-When an HTML artifact is justified:
+需要创建 HTML 产物时：
 
-1. Inspect the existing product styles or relevant visual references before choosing colors, type, spacing, or components.
-2. Write the file in the current workspace, preferably under `artifacts/`, with a descriptive `show-me-*.html` name.
-3. Keep it self-contained unless the workspace already has a suitable local runtime. Use real labels and data from the task.
-4. Give the user the absolute file path. Open or preview it with the available browser/file-preview capability when one is available; do not emit Claude-specific `Bash(open ...)` instructions.
-5. Check that the layout is usable at desktop and narrow widths. If it cannot be previewed, report that limitation and provide the artifact path.
+1. 选择颜色、字体、间距或组件前，检查现有产品样式或相关视觉参考。
+2. 将文件写入当前 workspace，优先放在 `artifacts/` 下，并使用有意义的 `show-me-*.html` 文件名。
+3. 除非 workspace 已有合适的本地 runtime，否则保持文件自包含；使用任务中的真实标签和数据。
+4. 向用户提供绝对路径；存在浏览器或文件预览能力时打开并预览，不输出 Claude 专用的 `Bash(open ...)` 指令。
+5. 检查桌面和窄屏宽度下的可用性；无法预览时说明限制并提供产物路径。
 
-## Final response shape
+## 最终回复结构
 
-Lead with one sentence stating the answer or key relationship, then place the visual, then add only the evidence, boundary, or next action needed to interpret it. Keep diagrams readable in plain text and provide a Mermaid or HTML alternative only when it materially helps.
+先用一句话说明答案或关键关系，再放置视觉内容，最后只补充理解所需的证据、边界或下一步。确保图在纯文本中仍可读；只有 Mermaid 或 HTML 能明显改善理解时才提供替代形式。

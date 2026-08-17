@@ -1,6 +1,6 @@
 interface:
   display_name: "Show Me"
-  short_description: "Explain complex topics with compact visuals"
-  default_prompt: "Use $show-me to explain the current structure with the smallest accurate visual."
+  short_description: "用最小且准确的图示解释复杂架构、流程和状态变化"
+  default_prompt: "使用 $show-me，以最小且准确的可视化解释当前结构。"
 policy:
   allow_implicit_invocation: true
